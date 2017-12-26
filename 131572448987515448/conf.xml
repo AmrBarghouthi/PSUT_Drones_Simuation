@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfObjectState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <objectState xsi:type="uavObjectState">
+    <position>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+	  </position>
+    <scale>
+      <x>1</x>
+      <y>1</y>
+      <z>1</z>
+    </scale>
+    <rotation>
+      <x>0</x>
+      <y>0</y>
+      <z>0</z>
+    </rotation>
+    <name>drone 0</name>
+    <prefabName>basicDrone</prefabName>
+    <cmdList>
+      <string>setSpeed 10</string>
+	  <string>move  y200</string>
+      <string>move z7.0711 x7.0711</string>
+    </cmdList>
+    <uavData>
+      <KeyValuePairOfStringString>
+        <Key>mass</Key>
+        <Value>1</Value>
+      </KeyValuePairOfStringString>
+    </uavData>
+  </objectState>
+  <objectState xsi:type="uavObjectState">
+    <position>
+      <x>-30</x>
+      <y>1</y>
+      <z>30</z>
+	 </position>
+    <scale>
+      <x>1</x>
+      <y>1</y>
+      <z>1</z>
+    </scale>
+    <rotation>
+      <x>0</x>
+      <y>0</y>
+      <z>0</z>
+    </rotation>
+    <name>drone 1</name>
+    <prefabName>basicDrone</prefabName>
+    <cmdList>
+      <string>setSpeed 10</string>
+	  <string>move  y200</string>
+      <string>move x22.1213 z-17.8787</string>
+     
+    </cmdList>
+    <uavData>
+      <KeyValuePairOfStringString>
+        <Key>mass</Key>
+        <Value>1</Value>
+      </KeyValuePairOfStringString>
+    </uavData>
+  </objectState>
+  <objectState xsi:type="uavObjectState">
+    <position>
+      <x>15</x>
+      <y>1</y>
+      <z>15</z>
+	    </position>
+    <scale>
+      <x>1</x>
+      <y>1</y>
+      <z>1</z>
+    </scale>
+    <rotation>
+      <x>0</x>
+      <y>0</y>
+      <z>0</z>
+    </rotation>
+    <name>drone 2</name>
+    <prefabName>basicDrone</prefabName>
+    <cmdList>
+      <string>setSpeed 10</string>
+	  <string>move  y200</string>
+	  <string>move  z0 x7.7071</string>
+   
+     
+    </cmdList>
+    <uavData>
+      <KeyValuePairOfStringString>
+        <Key>mass</Key>
+        <Value>1</Value>
+      </KeyValuePairOfStringString>
+    </uavData>
+  </objectState>
+ 
+ 
+ 
+</ArrayOfObjectState>

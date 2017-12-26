@@ -1,0 +1,15 @@
+﻿<Properties StartupItem="DroneSimulation.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\code\simpleDrone.cs">
+    <Files>
+      <File FileName="Assets\code\genrateEnv.cs" Line="1" Column="1" />
+      <File FileName="Assets\code\simpleDrone.cs" Line="1" Column="1" />
+      <File FileName="Assets\droneWithPid.cs" Line="1" Column="1" />
+      <File FileName="Assets\ExtendedFlycam.cs" Line="78" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<comminactionLogger xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <logs>
+    <comminactionLogEntry>
+      <msg>move z7.0711 x7.0711</msg>
+      <from>drone 0</from>
+      <to>drone 2</to>
+      <state>sent</state>
+      <distnace>19.9268</distnace>
+    </comminactionLogEntry>
+    <comminactionLogEntry>
+      <msg>move  z0 x7.7071</msg>
+      <from>drone 2</from>
+      <to>drone 0</to>
+      <state>sent</state>
+      <distnace>19.9268</distnace>
+    </comminactionLogEntry>
+    <comminactionLogEntry>
+      <msg>update</msg>
+      <from>drone 0</from>
+      <to>drone 2</to>
+      <state>sent</state>
+      <distnace>18.4333572</distnace>
+    </comminactionLogEntry>
+    <comminactionLogEntry>
+      <msg>update</msg>
+      <from>drone 2</from>
+      <to>drone 0</to>
+      <state>sent</state>
+      <distnace>18.4333572</distnace>
+    </comminactionLogEntry>
+    <comminactionLogEntry>
+      <msg>move z7.0711 x7.0711</msg>
+      <from>drone 0</from>
+      <to>drone 1</to>
+      <state>sent</state>
+      <distnace>19.70121</distnace>
+    </comminactionLogEntry>
+    <comminactionLogEntry>
+      <msg>move x22.1213 z-17.8787</msg>
+      <from>drone 1</from>
+      <to>drone 0</to>
+      <state>sent</state>
+      <distnace>19.70121</distnace>
+    </comminactionLogEntry>
+    <comminactionLogEntry>
+      <msg>move x22.1213 z-17.8787</msg>
+      <from>drone 1</from>
+      <to>drone 2</to>
+      <state>sent</state>
+      <distnace>24.4138145</distnace>
+    </comminactionLogEntry>
+    <comminactionLogEntry>
+      <msg>move  z0 x7.7071</msg>
+      <from>drone 2</from>
+      <to>drone 1</to>
+      <state>sent</state>
+      <distnace>24.4138145</distnace>
+    </comminactionLogEntry>
+    <comminactionLogEntry>
+      <msg>update</msg>
+      <from>drone 0</from>
+      <to>drone 2</to>
+      <state>sent</state>
+      <distnace>7.15909</distnace>
+    </comminactionLogEntry>
+    <comminactionLogEntry>
+      <msg>update</msg>
+      <from>drone 2</from>
+      <to>drone 0</to>
+      <state>sent</state>
+      <distnace>7.15909</distnace>
+    </comminactionLogEntry>
+  </logs>
+</comminactionLogger>
