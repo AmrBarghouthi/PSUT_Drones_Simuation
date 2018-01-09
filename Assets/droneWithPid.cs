@@ -348,8 +348,11 @@ public class droneWithPid : UAV {
     }
     private void OnTriggerExit(Collider other)
     {
-        inRageObjects.Remove(other.gameObject);
-        droneEventLogEntry entry = new droneEventLogEntry();
+		if (inRageObjects.Contains (other.gameObject))
+			inRageObjects.Remove (other.gameObject);
+		else
+			return;
+		droneEventLogEntry entry = new droneEventLogEntry();
         entry.cmd = lastFetchedCmd;
         entry.entryType = "object out of range";
         entry.position = this.transform.position;
