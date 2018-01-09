@@ -18,6 +18,7 @@ public class comminaction : MonoBehaviour {
         entry.state = "sent";
         entry.from = sendr.name;
         entry.to = rcever.name;
+		entry.time = Time.time;
         entry.distnace = (sendr.transform.position - rcever.transform.position).magnitude;
         rcever.readMessage(msg, sendr);
         loger.logs.Add(entry);
