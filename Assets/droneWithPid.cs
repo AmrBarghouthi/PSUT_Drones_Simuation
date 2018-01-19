@@ -7,22 +7,22 @@ public class droneWithPid : UAV {
     protected float weight = 3;//not used yet
                                //	protected float lenght;//not used yet
                                //	protected float width;//not used yet
-    protected float max_speed = float.PositiveInfinity;//if target speed is less than max the max is used 
+    protected float max_speed = float.PositiveInfinity;//if target speed is less than max the max is used
                                                        //	protected float min_speed;//not used yet
-                                                       //variables for the recharge command 
+                                                       //variables for the recharge command
     float chrg;
     float waitTime = 1;
     float updateMsgPeriod = 10;
     float updateMsgTimer = 0;
-    //end 
-    //variables for setSpeed command 
+    //end
+    //variables for setSpeed command
     float setspeed;
     //end
     //variables defined by amr
     public float speed { set; get; }
     public Vector3 target;
     //****************************************************
-    // public float speed; i defined speed in the UAV class 
+    // public float speed; i defined speed in the UAV class
     //****************************************************
     public PID speedContX, speedContY, speedContZ;
     public float speedLoopRadius;
@@ -85,10 +85,10 @@ public class droneWithPid : UAV {
                 if (subCmd[subCmdIndex].Contains("y")) { y = true; target.y = float.Parse(subCmd[subCmdIndex].Substring(1)); }
 
                 if (subCmd[subCmdIndex].Contains("z")) { z = true; target.z = float.Parse(subCmd[subCmdIndex].Substring(1)); }
-              
+
                 if (subCmd[subCmdIndex].Contains("r")) isRletive = true;
                 Debug.Log(subCmd[subCmdIndex]);
-               
+
             }
             if (!x)
                 target.x = transform.position.x;
@@ -111,7 +111,7 @@ public class droneWithPid : UAV {
                 waitTime = float.PositiveInfinity;
 
         }
-        //change position orders drone to move certain displacement while move command 
+        //change position orders drone to move certain displacement while move command
         //orders drone to go to a new position at x,y,z
 
 
@@ -124,7 +124,7 @@ public class droneWithPid : UAV {
 
             /// code to change the charge persentage goes here also
         }
-        // set speed goes here 
+        // set speed goes here
         if (curCmd.Contains("setSpeed"))
         {
 
@@ -137,7 +137,7 @@ public class droneWithPid : UAV {
 
 
         cmdDone = false;
-         
+
     }
     Rigidbody rb;
     void FixedUpdate()
@@ -152,7 +152,7 @@ public class droneWithPid : UAV {
             //Debug.Log(name+" exeuting " + cmdList[currentCmdIndex-1]);
 
 
-            /////change position 
+            /////change position
             if (curCmd == "move" || curCmd =="wait")
             {
                 //Debug.Log ("target "+target);
@@ -164,7 +164,7 @@ public class droneWithPid : UAV {
                 Vector3 dir = err.normalized;
                 //Debug.Log ("dir" + dir);
                 //dir = new Vector3(1, 0, 0);
-                
+
               //  Debug.Log(rb.velocity.magnitude);
              //   Debug.Log(target);
 
@@ -218,12 +218,13 @@ public class droneWithPid : UAV {
             else
                 cmdDone = true;
         }
-        updateMsgTimer += Time.deltaTime;
+
         if(updateMsgTimer>=updateMsgPeriod)
         {
             sendPeriodicMsgs();
             updateMsgTimer = 0;
         }
+        updateMsgTimer += Time.deltaTime;
         outputStreamWriter.WriteLine(Time.time.ToString() + ","
             + transform.position.x + ","
             + transform.position.y + ","
@@ -231,16 +232,13 @@ public class droneWithPid : UAV {
             + transform.rotation.eulerAngles.x + ","
             + transform.rotation.eulerAngles.y + ","
             + transform.rotation.eulerAngles.z);
-            
+
     }
     void sendPeriodicMsgs()
     {
-        foreach(var x in inRageObjects)
-        {
-            UAV uav = x.GetComponent<UAV>();
-            if(uav != null)
-                sendMessage("update", uav);
-        }
+
+                sendMessage("update", null);
+         
     }
     void OnCollisionEnter(Collision collision)
     {
@@ -263,7 +261,7 @@ public class droneWithPid : UAV {
         if (otherUAV != null)
            entry.otherCmd = otherUAV.lastFetchedCmd;
         eventLogger.logs.Add(entry);
-        
+
         cmdList = new string[2];
         cmdList[0] = "move y0 x"+transform.position.x.ToString()+" z"+ transform.position.z.ToString();
         cmdList[1] = "wait";
@@ -328,7 +326,7 @@ public class droneWithPid : UAV {
         entry.velocity = rb.velocity;
         entry.time = Time.time;
         //  entry.relativeVelocity = collision.relativeVelocity;
-        
+
         entry.otherName = other.name;
         UAV otherUAV = other.gameObject.GetComponent<UAV>();
         if (otherUAV != null)
@@ -341,10 +339,10 @@ public class droneWithPid : UAV {
     }
     private void OnTriggerStay(Collider other)
     {
-        
+
         if(other.name != "ground")
           Debug.DrawLine(this.transform.position, other.transform.position,Color.black);
-        
+
     }
     private void OnTriggerExit(Collider other)
     {
@@ -360,13 +358,13 @@ public class droneWithPid : UAV {
         entry.velocity = rb.velocity;
         entry.time = Time.time;
         //  entry.relativeVelocity = collision.relativeVelocity;
-       
+
         entry.otherName = other.name;
         UAV otherUAV = other.gameObject.GetComponent<UAV>();
         if (otherUAV != null)
             entry.otherCmd = otherUAV.lastFetchedCmd;
         eventLogger.logs.Add(entry);
-        
+
     }
     void OnApplicationQuit()
     {
@@ -375,7 +373,7 @@ public class droneWithPid : UAV {
         outputStreamWriter.Flush();
         outputStream.Close();
         eventsOutputStream.Close();
-        
+
     }
 
 }

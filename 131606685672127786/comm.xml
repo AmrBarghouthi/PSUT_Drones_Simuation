@@ -7,6 +7,7 @@
       <to>drone 2</to>
       <state>sent</state>
       <distnace>19.9268</distnace>
+      <time>19.6199989</time>
     </comminactionLogEntry>
     <comminactionLogEntry>
       <msg>move  z0 x7.7071</msg>
@@ -14,20 +15,23 @@
       <to>drone 0</to>
       <state>sent</state>
       <distnace>19.9268</distnace>
+      <time>19.6199989</time>
     </comminactionLogEntry>
     <comminactionLogEntry>
       <msg>update</msg>
       <from>drone 0</from>
       <to>drone 2</to>
       <state>sent</state>
-      <distnace>18.4333572</distnace>
+      <distnace>18.3347359</distnace>
+      <time>20</time>
     </comminactionLogEntry>
     <comminactionLogEntry>
       <msg>update</msg>
       <from>drone 2</from>
       <to>drone 0</to>
       <state>sent</state>
-      <distnace>18.4333572</distnace>
+      <distnace>18.3347359</distnace>
+      <time>20</time>
     </comminactionLogEntry>
     <comminactionLogEntry>
       <msg>move z7.0711 x7.0711</msg>
@@ -35,6 +39,7 @@
       <to>drone 1</to>
       <state>sent</state>
       <distnace>19.70121</distnace>
+      <time>20.9399986</time>
     </comminactionLogEntry>
     <comminactionLogEntry>
       <msg>move x22.1213 z-17.8787</msg>
@@ -42,6 +47,7 @@
       <to>drone 0</to>
       <state>sent</state>
       <distnace>19.70121</distnace>
+      <time>20.9399986</time>
     </comminactionLogEntry>
     <comminactionLogEntry>
       <msg>move x22.1213 z-17.8787</msg>
@@ -49,6 +55,7 @@
       <to>drone 2</to>
       <state>sent</state>
       <distnace>24.4138145</distnace>
+      <time>21.06</time>
     </comminactionLogEntry>
     <comminactionLogEntry>
       <msg>move  z0 x7.7071</msg>
@@ -56,20 +63,39 @@
       <to>drone 1</to>
       <state>sent</state>
       <distnace>24.4138145</distnace>
+      <time>21.06</time>
     </comminactionLogEntry>
     <comminactionLogEntry>
       <msg>update</msg>
       <from>drone 0</from>
       <to>drone 2</to>
       <state>sent</state>
-      <distnace>7.15909</distnace>
+      <distnace>7.15937042</distnace>
+      <time>30</time>
     </comminactionLogEntry>
     <comminactionLogEntry>
       <msg>update</msg>
       <from>drone 2</from>
       <to>drone 0</to>
       <state>sent</state>
-      <distnace>7.15909</distnace>
+      <distnace>7.15937042</distnace>
+      <time>30</time>
+    </comminactionLogEntry>
+    <comminactionLogEntry>
+      <msg>update</msg>
+      <from>drone 0</from>
+      <to>drone 2</to>
+      <state>sent</state>
+      <distnace>7.099697</distnace>
+      <time>40</time>
+    </comminactionLogEntry>
+    <comminactionLogEntry>
+      <msg>update</msg>
+      <from>drone 2</from>
+      <to>drone 0</to>
+      <state>sent</state>
+      <distnace>7.099697</distnace>
+      <time>40</time>
     </comminactionLogEntry>
   </logs>
 </comminactionLogger>

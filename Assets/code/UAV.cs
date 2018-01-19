@@ -22,10 +22,10 @@ public class UAV : MonoBehaviour
 
     protected bool cmdDone = true;
 
-    protected List<GameObject> inRageObjects;
+    public List<GameObject> inRageObjects;
     public string lastFetchedCmd;
     protected string fetchCmad()
-    { 
+    {
         if (cmdList.Length <= currentCmdIndex)
         {
             lastFetchedCmd = "wait";
@@ -37,9 +37,9 @@ public class UAV : MonoBehaviour
         return lastFetchedCmd;
     }
 	public void  Start()
-    {  
+    {
 		//Debug.Log ("base Start exexuting");
-       
+
 		outputStream = File.Open(loadEnv.folderName + "/"+this.name+".txt",FileMode.CreateNew);
 		outputStreamWriter = new StreamWriter(outputStream);
         eventsOutputStream = File.Open(loadEnv.folderName + "/" + this.name + "_events.xml", FileMode.CreateNew);
@@ -60,11 +60,11 @@ public class UAV : MonoBehaviour
     }
     public virtual void setupFromDictionary(Dictionary<string, string> src)
     {
-        
+
     }
     public virtual Dictionary<string, string> makeDictionary()
     {
-        
+
         Dictionary <string, string> UAVData =  new Dictionary<string, string>();
       /*  UAVData["mass"] = (this.GetComponent<Rigidbody>() as Rigidbody).mass.ToString();
         UAVData["drag"] = (this.GetComponent<Rigidbody>() as Rigidbody).drag.ToString();*/
@@ -72,27 +72,36 @@ public class UAV : MonoBehaviour
     }
     public virtual void sendMessage(object msg,UAV target)
     {
-        comminaction air = FindObjectOfType<comminaction>();
-        air.routeMsg(this, target, msg);
-       // target.readMessage(msg, this);
-        droneEventLogEntry entry = new droneEventLogEntry();
-        entry.cmd = lastFetchedCmd;
-        entry.entryType = "new message sent ";
-        entry.position = this.transform.position;
-        entry.rotation = this.transform.rotation.eulerAngles;
-        Rigidbody rb = GetComponent<Rigidbody>();
-        entry.velocity = rb.velocity;
-        entry.time = Time.time;
-        //  entry.relativeVelocity = collision.relativeVelocity;
-        entry.info = msg.ToString();
-        entry.otherName = target.name;
-        UAV otherUAV = target.gameObject.GetComponent<UAV>();
-        if (otherUAV != null)
-            entry.otherCmd = otherUAV.lastFetchedCmd;
-        eventLogger.logs.Add(entry);
+
+
+          comminaction air = FindObjectOfType<comminaction>();
+          air.routeMsg(this, target, msg);
+         // target.readMessage(msg, this);
+          droneEventLogEntry entry = new droneEventLogEntry();
+          entry.cmd = lastFetchedCmd;
+          entry.entryType = "new message sent";
+          entry.position = this.transform.position;
+          entry.rotation = this.transform.rotation.eulerAngles;
+          Rigidbody rb = GetComponent<Rigidbody>();
+          entry.velocity = rb.velocity;
+          entry.time = Time.time;
+          //  entry.relativeVelocity = collision.relativeVelocity;
+          entry.info = msg.ToString();
+         if (target != null){
+            entry.otherName = target.name;
+
+            UAV otherUAV = target.gameObject.GetComponent<UAV>();
+            if (otherUAV != null)
+                entry.otherCmd = otherUAV.lastFetchedCmd;
+          }else{
+            entry.otherName = "ALL";
+
+          eventLogger.logs.Add(entry);
+      }
+
     }
     public virtual void readMessage(object msg,UAV src)
-    { 
+    {
         droneEventLogEntry entry = new droneEventLogEntry();
         entry.cmd = lastFetchedCmd;
         entry.entryType = "new message recived ";
