@@ -13,25 +13,38 @@ public class comminaction : MonoBehaviour {
     comminactionLogger loger;
 	public void routeMsg(UAV sendr,UAV rcever,object msg)
     {
-        if(rcever!=null)
+
+
+        comminactionLogEntry entry = new comminactionLogEntry();
+        entry.msg = msg.ToString();
+
+        entry.from = sendr.name;
+        
+        entry.time = Time.time;
+
+
+        if (rcever!=null)
         {
-          comminactionLogEntry entry = new comminactionLogEntry();
-          entry.msg = msg.ToString();
-          entry.state = "sent";
-          entry.from = sendr.name;
-          entry.to = rcever.name;
-  		  entry.time = Time.time;
-          entry.distnace = (sendr.transform.position - rcever.transform.position).magnitude;
-          rcever.readMessage(msg, sendr);
-          loger.logs.Add(entry);
+            float distnace = (sendr.transform.position - rcever.transform.position).magnitude;
+            entry.to = rcever.name;
+            entry.recivedby.Add(new reviverData(rcever.name, distnace));
+            rcever.readMessage(msg, sendr);
+          
        }else{
-         foreach(var x in sendr.inRageObjects)
-         {
-           UAV uav = x.GetComponent<UAV>();
-           if(uav !=null)
-            	routeMsg(sendr,uav,msg);
-         }
+            var allUav = GameObject.FindObjectsOfType<UAV>();
+            entry.to = "ALL";
+            foreach (var x in allUav)
+            {
+                float distnace = (sendr.transform.position - x.transform.position).magnitude;
+                if (x == sendr) continue;
+                if (sendr.inRageObjects.Contains(x.gameObject))
+                    entry.recivedby.Add(new reviverData(x.name,distnace));
+                else
+                    entry.faildToReciveBy.Add(new reviverData(x.name,distnace));
+            }
+        
        }
+        loger.logs.Add(entry);
     }
     void OnDestroy()
     {
