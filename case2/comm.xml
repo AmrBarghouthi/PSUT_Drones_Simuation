@@ -2,100 +2,239 @@
 <comminactionLogger xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <logs>
     <comminactionLogEntry>
+      <msg>update</msg>
+      <from>drone 0</from>
+      <to>ALL</to>
+      <recivedby />
+      <faildToReciveBy>
+        <reviverData>
+          <name>drone 2</name>
+          <distance>21.2132034</distance>
+        </reviverData>
+        <reviverData>
+          <name>drone 1</name>
+          <distance>42.42636</distance>
+        </reviverData>
+      </faildToReciveBy>
+      <time>10</time>
+    </comminactionLogEntry>
+    <comminactionLogEntry>
+      <msg>update</msg>
+      <from>drone 1</from>
+      <to>ALL</to>
+      <recivedby />
+      <faildToReciveBy>
+        <reviverData>
+          <name>drone 2</name>
+          <distance>47.4341</distance>
+        </reviverData>
+        <reviverData>
+          <name>drone 0</name>
+          <distance>42.42636</distance>
+        </reviverData>
+      </faildToReciveBy>
+      <time>10</time>
+    </comminactionLogEntry>
+    <comminactionLogEntry>
+      <msg>update</msg>
+      <from>drone 2</from>
+      <to>ALL</to>
+      <recivedby />
+      <faildToReciveBy>
+        <reviverData>
+          <name>drone 1</name>
+          <distance>47.4341</distance>
+        </reviverData>
+        <reviverData>
+          <name>drone 0</name>
+          <distance>21.2132034</distance>
+        </reviverData>
+      </faildToReciveBy>
+      <time>10</time>
+    </comminactionLogEntry>
+    <comminactionLogEntry>
       <msg>move z7.0711 x7.0711</msg>
       <from>drone 0</from>
       <to>drone 2</to>
-      <state>sent</state>
-      <distnace>19.9268</distnace>
+      <recivedby>
+        <reviverData>
+          <name>drone 2</name>
+          <distance>19.9268</distance>
+        </reviverData>
+      </recivedby>
+      <faildToReciveBy />
       <time>19.6199989</time>
     </comminactionLogEntry>
     <comminactionLogEntry>
       <msg>move  z0 x7.7071</msg>
       <from>drone 2</from>
       <to>drone 0</to>
-      <state>sent</state>
-      <distnace>19.9268</distnace>
+      <recivedby>
+        <reviverData>
+          <name>drone 0</name>
+          <distance>19.9268</distance>
+        </reviverData>
+      </recivedby>
+      <faildToReciveBy />
       <time>19.6199989</time>
     </comminactionLogEntry>
     <comminactionLogEntry>
       <msg>update</msg>
       <from>drone 0</from>
-      <to>drone 2</to>
-      <state>sent</state>
-      <distnace>18.4333572</distnace>
-      <time>19.98</time>
+      <to>ALL</to>
+      <recivedby>
+        <reviverData>
+          <name>drone 2</name>
+          <distance>18.3347359</distance>
+        </reviverData>
+      </recivedby>
+      <faildToReciveBy>
+        <reviverData>
+          <name>drone 1</name>
+          <distance>34.5071869</distance>
+        </reviverData>
+      </faildToReciveBy>
+      <time>20</time>
+    </comminactionLogEntry>
+    <comminactionLogEntry>
+      <msg>update</msg>
+      <from>drone 1</from>
+      <to>ALL</to>
+      <recivedby />
+      <faildToReciveBy>
+        <reviverData>
+          <name>drone 2</name>
+          <distance>39.97289</distance>
+        </reviverData>
+        <reviverData>
+          <name>drone 0</name>
+          <distance>34.5071869</distance>
+        </reviverData>
+      </faildToReciveBy>
+      <time>20</time>
     </comminactionLogEntry>
     <comminactionLogEntry>
       <msg>update</msg>
       <from>drone 2</from>
-      <to>drone 0</to>
-      <state>sent</state>
-      <distnace>18.4333572</distnace>
-      <time>19.98</time>
+      <to>ALL</to>
+      <recivedby>
+        <reviverData>
+          <name>drone 0</name>
+          <distance>18.3347359</distance>
+        </reviverData>
+      </recivedby>
+      <faildToReciveBy>
+        <reviverData>
+          <name>drone 1</name>
+          <distance>39.97289</distance>
+        </reviverData>
+      </faildToReciveBy>
+      <time>20</time>
     </comminactionLogEntry>
     <comminactionLogEntry>
       <msg>move z7.0711 x7.0711</msg>
       <from>drone 0</from>
       <to>drone 1</to>
-      <state>sent</state>
-      <distnace>19.70121</distnace>
+      <recivedby>
+        <reviverData>
+          <name>drone 1</name>
+          <distance>19.70121</distance>
+        </reviverData>
+      </recivedby>
+      <faildToReciveBy />
       <time>20.9399986</time>
     </comminactionLogEntry>
     <comminactionLogEntry>
       <msg>move x22.1213 z-17.8787</msg>
       <from>drone 1</from>
       <to>drone 0</to>
-      <state>sent</state>
-      <distnace>19.70121</distnace>
+      <recivedby>
+        <reviverData>
+          <name>drone 0</name>
+          <distance>19.70121</distance>
+        </reviverData>
+      </recivedby>
+      <faildToReciveBy />
       <time>20.9399986</time>
     </comminactionLogEntry>
     <comminactionLogEntry>
       <msg>move x22.1213 z-17.8787</msg>
       <from>drone 1</from>
       <to>drone 2</to>
-      <state>sent</state>
-      <distnace>24.4138145</distnace>
+      <recivedby>
+        <reviverData>
+          <name>drone 2</name>
+          <distance>24.4138145</distance>
+        </reviverData>
+      </recivedby>
+      <faildToReciveBy />
       <time>21.06</time>
     </comminactionLogEntry>
     <comminactionLogEntry>
       <msg>move  z0 x7.7071</msg>
       <from>drone 2</from>
       <to>drone 1</to>
-      <state>sent</state>
-      <distnace>24.4138145</distnace>
+      <recivedby>
+        <reviverData>
+          <name>drone 1</name>
+          <distance>24.4138145</distance>
+        </reviverData>
+      </recivedby>
+      <faildToReciveBy />
       <time>21.06</time>
     </comminactionLogEntry>
     <comminactionLogEntry>
       <msg>update</msg>
       <from>drone 0</from>
-      <to>drone 2</to>
-      <state>sent</state>
-      <distnace>7.15909</distnace>
-      <time>29.98</time>
+      <to>ALL</to>
+      <recivedby>
+        <reviverData>
+          <name>drone 2</name>
+          <distance>7.15937042</distance>
+        </reviverData>
+      </recivedby>
+      <faildToReciveBy>
+        <reviverData>
+          <name>drone 1</name>
+          <distance>29.3400555</distance>
+        </reviverData>
+      </faildToReciveBy>
+      <time>30</time>
+    </comminactionLogEntry>
+    <comminactionLogEntry>
+      <msg>update</msg>
+      <from>drone 1</from>
+      <to>ALL</to>
+      <recivedby />
+      <faildToReciveBy>
+        <reviverData>
+          <name>drone 2</name>
+          <distance>23.146698</distance>
+        </reviverData>
+        <reviverData>
+          <name>drone 0</name>
+          <distance>29.3400555</distance>
+        </reviverData>
+      </faildToReciveBy>
+      <time>30</time>
     </comminactionLogEntry>
     <comminactionLogEntry>
       <msg>update</msg>
       <from>drone 2</from>
-      <to>drone 0</to>
-      <state>sent</state>
-      <distnace>7.15909</distnace>
-      <time>29.98</time>
-    </comminactionLogEntry>
-    <comminactionLogEntry>
-      <msg>update</msg>
-      <from>drone 0</from>
-      <to>drone 2</to>
-      <state>sent</state>
-      <distnace>7.099704</distnace>
-      <time>39.98</time>
-    </comminactionLogEntry>
-    <comminactionLogEntry>
-      <msg>update</msg>
-      <from>drone 2</from>
-      <to>drone 0</to>
-      <state>sent</state>
-      <distnace>7.099704</distnace>
-      <time>39.98</time>
+      <to>ALL</to>
+      <recivedby>
+        <reviverData>
+          <name>drone 0</name>
+          <distance>7.15937042</distance>
+        </reviverData>
+      </recivedby>
+      <faildToReciveBy>
+        <reviverData>
+          <name>drone 1</name>
+          <distance>23.146698</distance>
+        </reviverData>
+      </faildToReciveBy>
+      <time>30</time>
     </comminactionLogEntry>
   </logs>
 </comminactionLogger>

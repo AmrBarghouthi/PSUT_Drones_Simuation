@@ -8,7 +8,7 @@ using System.Text;
         public List<comminactionLogEntry> logs;
         public comminactionLogger()
         {
-        logs = new List<comminactionLogEntry>();
+             logs = new List<comminactionLogEntry>();
         }
     }
 
