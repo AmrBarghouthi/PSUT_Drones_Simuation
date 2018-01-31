@@ -87,7 +87,7 @@ public class droneWithPid : UAV {
                 if (subCmd[subCmdIndex].Contains("z")) { z = true; target.z = float.Parse(subCmd[subCmdIndex].Substring(1)); }
 
                 if (subCmd[subCmdIndex].Contains("r")) isRletive = true;
-                Debug.Log(subCmd[subCmdIndex]);
+//                Debug.Log(subCmd[subCmdIndex]);
 
             }
             if (!x)

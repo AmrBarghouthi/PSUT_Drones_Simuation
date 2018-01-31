@@ -11,6 +11,7 @@ public class testSenaroGentrater : MonoBehaviour {
 	public float droneRaduis;
 	public float Y;
 	int maxNumberOfTrys = 1000;
+	public int numberOfMoveCmds;
 	List<Vector3> currentStartLocations;
 	void Start () {
 		minX = -AreaWidth / 2;
@@ -49,12 +50,17 @@ public class testSenaroGentrater : MonoBehaviour {
 		List<objectState> stateList = new List<objectState>();
 		int count =0;
 		foreach (var x in currentStartLocations) {
-			Vector3 endLocation = getRandomVector ();
+			
 			Dictionary<string, string> uavData = new Dictionary<string, string> ();
 			uavData ["mass"] = "4";
-			string[] cmdList = new string[2];
+			string[] cmdList = new string[numberOfMoveCmds+1];
 			cmdList [0] = "setSpeed 30";
-			cmdList [1] = "move  x"+endLocation.x.ToString()+"  y"+endLocation.y.ToString()+" z"+endLocation.z.ToString();
+			for (int k = 0; k < numberOfMoveCmds; k++) {
+				Vector3 endLocation = getRandomVector ();
+				cmdList [k+1] = "move  x" + endLocation.x.ToString () + "  y" + endLocation.y.ToString () + " z" + endLocation.z.ToString ();
+				
+			}
+
 			uavObjectState state = new uavObjectState("drone " + count.ToString(), "basicDrone");
 			state.position = x;
 			state.uavData = uavObjectState.makeListFromDictionary(uavData) ;
