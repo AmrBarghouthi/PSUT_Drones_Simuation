@@ -53,7 +53,7 @@ public class droneWithPid : UAV {
     void decode()
     {
         curCmd = fetchCmad();
-        //Debug.Log("decodeing :" + curCmd);
+        Debug.Log("decodeing :" + curCmd);
 
         if (curCmd.Contains("goToObject"))
         {
@@ -109,7 +109,8 @@ public class droneWithPid : UAV {
             }
             else
                 waitTime = float.PositiveInfinity;
-
+            target = transform.position;
+            curCmd = "wait";
         }
         //change position orders drone to move certain displacement while move command
         //orders drone to go to a new position at x,y,z
@@ -149,7 +150,7 @@ public class droneWithPid : UAV {
             decode();
         //no need for eles strat exexuting the new cmd on the smae time unit it's decoded
         {
-            //Debug.Log(name+" exeuting " + cmdList[currentCmdIndex-1]);
+            Debug.Log(name+" exeuting " + curCmd);
 
 
             /////change position
@@ -165,8 +166,8 @@ public class droneWithPid : UAV {
                 //Debug.Log ("dir" + dir);
                 //dir = new Vector3(1, 0, 0);
 
-              //  Debug.Log(rb.velocity.magnitude);
-             //   Debug.Log(target);
+               //  Debug.Log(rb.velocity.magnitude);
+               //  Debug.Log(target);
 
                 float driveX, driveY, driveZ;
                 if (err.magnitude > speedLoopRadius)
@@ -184,14 +185,11 @@ public class droneWithPid : UAV {
                 rb.AddForce(new Vector3(driveX, driveY, driveZ));
                 //Debug.Log(rb.velocity);
                // this.transform.Translate(dir * Time.deltaTime * speed, Space.World);
-                if ((target - transform.position).magnitude < 0.2)
+                if ((target - transform.position).magnitude < 0.2 && curCmd.Contains("move"))
                 {
                     cmdDone = true;
 
                 }
-
-
-
             }
             else if (curCmd == "recharge")
             {
@@ -209,16 +207,19 @@ public class droneWithPid : UAV {
                 }
                 cmdDone = true;
             }
-            else if (curCmd == "wait")
+            else
+                cmdDone = true;
+            if (curCmd == "wait")
             {
                 Debug.Log("remanig time to wait" + waitTime);
                 if (waitTime > 0)
                     waitTime -= Time.deltaTime;
+                else
+                    cmdDone = true;
             }
-            else
-                cmdDone = true;
+           
         }
-
+       // Debug.Log(waitTime);
         if(updateMsgTimer>=updateMsgPeriod)
         {
             sendPeriodicMsgs();
@@ -262,12 +263,12 @@ public class droneWithPid : UAV {
            entry.otherCmd = otherUAV.lastFetchedCmd;
         eventLogger.logs.Add(entry);
 
-        cmdList = new string[2];
-        cmdList[0] = "move y0 x"+transform.position.x.ToString()+" z"+ transform.position.z.ToString();
-        cmdList[1] = "wait";
-        currentCmdIndex = 0;
-        cmdDone = true;
-
+        //cmdList = new string[2];
+        //cmdList[0] = "move y0 x"+transform.position.x.ToString()+" z"+ transform.position.z.ToString();
+        //cmdList[1] = "wait";
+        //currentCmdIndex = 0;
+        //cmdDone = true;
+        Destroy(this.gameObject);
        // Debug.Log(name + " cs LogSize:" + eventLogger.logs.Count);
 
     }

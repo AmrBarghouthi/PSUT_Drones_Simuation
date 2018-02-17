@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using System.Xml.Serialization;
-public class testSenaroGentrater : MonoBehaviour {
+public class testSenaroGentrater1 : MonoBehaviour {
 	public float AreaWidth;
 	float minX,minZ,maxX,maxZ;
 	public int numberOfDrones;

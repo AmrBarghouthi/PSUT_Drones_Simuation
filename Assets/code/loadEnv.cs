@@ -18,9 +18,11 @@ public class loadEnv : MonoBehaviour {
         Directory.CreateDirectory(folderName);
         Stream file = File.Open(path,FileMode.Open);
         List<objectState> list =  serializer.Deserialize(file) as List<objectState>;
+         
         foreach(var i in list)
         {
             i.createGameObject();
+            Debug.Log(i.name);
         }
 
 

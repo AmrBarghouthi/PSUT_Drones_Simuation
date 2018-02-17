@@ -77,12 +77,19 @@ public class ExtendedFlycam : MonoBehaviour
     { 
         GUI.Label(new Rect(0, 0, 100, 100), droneName, guiStyle);
     }
+    int numberOfDrones = 0;
     void Update()
     {
         list = FindObjectsOfType(typeof(UAV));
-        if(list.Length!=0)
-         camraFoucsOn(list[activeDrone] as UAV);
-        droneName = list[activeDrone].name;
+        if (numberOfDrones != list.Length)
+            activeDrone = 0;
+        numberOfDrones = list.Length;
+        if (list.Length != 0)
+        {
+            camraFoucsOn(list[activeDrone] as UAV);
+            droneName = list[activeDrone].name;
+        }
+        
         rotationX += Input.GetAxis("Mouse X") * cameraSensitivity * Time.deltaTime;
         rotationY += Input.GetAxis("Mouse Y") * cameraSensitivity * Time.deltaTime;
         rotationY = Mathf.Clamp(rotationY, -90, 90);

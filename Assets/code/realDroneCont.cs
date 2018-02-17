@@ -12,11 +12,11 @@ public class realDroneCont : UAV {
     public float maxMotorForce;
 	void Start () {
        // (this as UAV).Start();
-        fr = transform.FindChild("fr").gameObject;
-        fl = transform.FindChild("fl").gameObject;
-        br = transform.FindChild("br").gameObject;
-        bl = transform.FindChild("bl").gameObject;
-        gyro = transform.FindChild("gyro").gameObject;
+        fr = transform.Find("fr").gameObject;
+        fl = transform.Find("fl").gameObject;
+        br = transform.Find("br").gameObject;
+        bl = transform.Find("bl").gameObject;
+        gyro = transform.Find("gyro").gameObject;
         rb = GetComponent<Rigidbody>();
     }
 	
