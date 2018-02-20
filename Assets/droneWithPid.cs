@@ -53,7 +53,7 @@ public class droneWithPid : UAV {
     void decode()
     {
         curCmd = fetchCmad();
-        Debug.Log("decodeing :" + curCmd);
+       // Debug.Log("decodeing :" + curCmd);
 
         if (curCmd.Contains("goToObject"))
         {
@@ -150,7 +150,7 @@ public class droneWithPid : UAV {
             decode();
         //no need for eles strat exexuting the new cmd on the smae time unit it's decoded
         {
-            Debug.Log(name+" exeuting " + curCmd);
+           // Debug.Log(name+" exeuting " + curCmd);
 
 
             /////change position
@@ -211,7 +211,7 @@ public class droneWithPid : UAV {
                 cmdDone = true;
             if (curCmd == "wait")
             {
-                Debug.Log("remanig time to wait" + waitTime);
+               // Debug.Log("remanig time to wait " + waitTime);
                 if (waitTime > 0)
                     waitTime -= Time.deltaTime;
                 else
@@ -226,7 +226,7 @@ public class droneWithPid : UAV {
             updateMsgTimer = 0;
         }
         updateMsgTimer += Time.deltaTime;
-        outputStreamWriter.WriteLine(Time.time.ToString() + ","
+        outputStreamWriter.WriteLine(  Time.timeSinceLevelLoad.ToString() + ","
             + transform.position.x + ","
             + transform.position.y + ","
             + transform.position.z + ","
@@ -246,7 +246,7 @@ public class droneWithPid : UAV {
 
         //Debug.Log("collision");
         //eventsOutputStreamWriter.WriteLine("collisionData");
-        //eventsOutputStreamWriter.WriteLine("time = " +Time.time);
+        //eventsOutputStreamWriter.WriteLine("time = " +  Time.timeSinceLevelLoad);
         //eventsOutputStreamWriter.WriteLine("object = "+collision.transform.name);
         //eventsOutputStreamWriter.WriteLine("EndcollisionData\n");
         droneEventLogEntry entry = new droneEventLogEntry();
@@ -255,7 +255,8 @@ public class droneWithPid : UAV {
         entry.position = this.transform.position;
         entry.rotation = this.transform.rotation.eulerAngles;
         entry.velocity = rb.velocity;
-        entry.time = Time.time;
+        entry.time =   Time.timeSinceLevelLoad;
+      
         entry.relativeVelocity = collision.relativeVelocity;
         entry.otherName = collision.gameObject.name;
         UAV otherUAV = collision.gameObject.GetComponent<UAV>();
@@ -313,7 +314,7 @@ public class droneWithPid : UAV {
     {
         //Debug.Log(other.name+" is in range");
         //eventsOutputStreamWriter.WriteLine("newObjectInRange");
-        //eventsOutputStreamWriter.WriteLine("time = " + Time.time);
+        //eventsOutputStreamWriter.WriteLine("time = " +   Time.timeSinceLevelLoad);
         //eventsOutputStreamWriter.WriteLine("object = " + other.name);
         //eventsOutputStreamWriter.WriteLine("endnewObjectInRange\n");
         if (inRageObjects.Contains(other.gameObject))
@@ -325,7 +326,7 @@ public class droneWithPid : UAV {
         entry.position = this.transform.position;
         entry.rotation = this.transform.rotation.eulerAngles;
         entry.velocity = rb.velocity;
-        entry.time = Time.time;
+        entry.time =   Time.timeSinceLevelLoad;
         //  entry.relativeVelocity = collision.relativeVelocity;
 
         entry.otherName = other.name;
@@ -357,7 +358,7 @@ public class droneWithPid : UAV {
         entry.position = this.transform.position;
         entry.rotation = this.transform.rotation.eulerAngles;
         entry.velocity = rb.velocity;
-        entry.time = Time.time;
+        entry.time =   Time.timeSinceLevelLoad;
         //  entry.relativeVelocity = collision.relativeVelocity;
 
         entry.otherName = other.name;

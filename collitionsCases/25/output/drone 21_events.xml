@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<droneEventsLogger xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <logs>
+    <droneEventLogEntry>
+      <entryType>new message sent</entryType>
+      <position>
+        <x>101.0827</x>
+        <y>200.000366</y>
+        <z>-494.789337</z>
+      </position>
+      <rotation>
+        <x>270</x>
+        <y>315</y>
+        <z>0</z>
+      </rotation>
+      <time>10.0150328</time>
+      <cmd>wait</cmd>
+      <velocity>
+        <x>-0.1861231</x>
+        <y>-0.000139980009</y>
+        <z>-0.03620575</z>
+      </velocity>
+      <relativeVelocity>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </relativeVelocity>
+      <otherName>ALL</otherName>
+      <info>update</info>
+    </droneEventLogEntry>
+  </logs>
+</droneEventsLogger>

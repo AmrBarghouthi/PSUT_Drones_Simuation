@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<droneEventsLogger xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <logs>
+    <droneEventLogEntry>
+      <entryType>new message recived </entryType>
+      <position>
+        <x>-152.455582</x>
+        <y>199.942947</y>
+        <z>120.810745</z>
+      </position>
+      <rotation>
+        <x>270</x>
+        <y>315</y>
+        <z>0</z>
+      </rotation>
+      <time>8.355032</time>
+      <cmd>move  x399.6221  y200 z-468.132</cmd>
+      <velocity>
+        <x>20.22299</x>
+        <y>-0.004983305</y>
+        <z>-21.5652962</z>
+      </velocity>
+      <relativeVelocity>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </relativeVelocity>
+      <otherName>drone 0</otherName>
+      <otherCmd>move  x-87.21559  y200 z-87.32265</otherCmd>
+      <info>move  x-87.21559  y200 z-87.32265</info>
+    </droneEventLogEntry>
+    <droneEventLogEntry>
+      <entryType>object Detected</entryType>
+      <position>
+        <x>-152.455582</x>
+        <y>199.942947</y>
+        <z>120.810745</z>
+      </position>
+      <rotation>
+        <x>270</x>
+        <y>315</y>
+        <z>0</z>
+      </rotation>
+      <time>8.355032</time>
+      <cmd>move  x399.6221  y200 z-468.132</cmd>
+      <velocity>
+        <x>20.22299</x>
+        <y>-0.004983305</y>
+        <z>-21.5652962</z>
+      </velocity>
+      <relativeVelocity>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </relativeVelocity>
+      <otherName>drone 0</otherName>
+      <otherCmd>move  x-87.21559  y200 z-87.32265</otherCmd>
+    </droneEventLogEntry>
+    <droneEventLogEntry>
+      <entryType>new message sent</entryType>
+      <position>
+        <x>-119.2899</x>
+        <y>199.935379</y>
+        <z>85.4434738</z>
+      </position>
+      <rotation>
+        <x>270</x>
+        <y>315</y>
+        <z>0</z>
+      </rotation>
+      <time>10.0150328</time>
+      <cmd>move  x399.6221  y200 z-468.132</cmd>
+      <velocity>
+        <x>20.2227364</x>
+        <y>-0.00455494</y>
+        <z>-21.5655346</z>
+      </velocity>
+      <relativeVelocity>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </relativeVelocity>
+      <otherName>ALL</otherName>
+      <info>update</info>
+    </droneEventLogEntry>
+    <droneEventLogEntry>
+      <entryType>object out of range</entryType>
+      <position>
+        <x>-118.885445</x>
+        <y>199.935287</y>
+        <z>85.01216</z>
+      </position>
+      <rotation>
+        <x>270</x>
+        <y>315</y>
+        <z>0</z>
+      </rotation>
+      <time>10.0150328</time>
+      <cmd>move  x399.6221  y200 z-468.132</cmd>
+      <velocity>
+        <x>20.2227345</x>
+        <y>-0.00454952056</y>
+        <z>-21.5655384</z>
+      </velocity>
+      <relativeVelocity>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </relativeVelocity>
+      <otherName>drone 0</otherName>
+      <otherCmd>move  x-87.21559  y200 z-87.32265</otherCmd>
+    </droneEventLogEntry>
+  </logs>
+</droneEventsLogger>

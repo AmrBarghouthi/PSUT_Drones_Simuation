@@ -76,6 +76,8 @@ public class ExtendedFlycam : MonoBehaviour
     private void OnGUI()
     { 
         GUI.Label(new Rect(0, 0, 100, 100), droneName, guiStyle);
+        
+        GUI.Label(new Rect(0,100, 100, 100),   Time.timeSinceLevelLoad.ToString(), guiStyle);
     }
     int numberOfDrones = 0;
     void Update()

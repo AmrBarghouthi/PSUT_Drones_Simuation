@@ -20,7 +20,7 @@ public class comminaction : MonoBehaviour {
 
         entry.from = sendr.name;
         
-        entry.time = Time.time;
+        entry.time =   Time.timeSinceLevelLoad;
 
 
         if (rcever!=null)

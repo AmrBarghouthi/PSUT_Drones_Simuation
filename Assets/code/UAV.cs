@@ -84,7 +84,7 @@ public class UAV : MonoBehaviour
           entry.rotation = this.transform.rotation.eulerAngles;
           Rigidbody rb = GetComponent<Rigidbody>();
           entry.velocity = rb.velocity;
-          entry.time = Time.time;
+          entry.time =   Time.timeSinceLevelLoad;
           //  entry.relativeVelocity = collision.relativeVelocity;
           entry.info = msg.ToString();
          if (target != null){
@@ -109,7 +109,7 @@ public class UAV : MonoBehaviour
         entry.rotation = this.transform.rotation.eulerAngles;
         Rigidbody rb = GetComponent<Rigidbody>();
         entry.velocity = rb.velocity;
-        entry.time = Time.time;
+        entry.time =   Time.timeSinceLevelLoad;
         //  entry.relativeVelocity = collision.relativeVelocity;
         entry.info = msg.ToString();
         entry.otherName = src.name;

@@ -188,7 +188,7 @@ public class simpleDrone : UAV {
                 cmdDone = true;
         }
        
-		outputStreamWriter.WriteLine(Time.time.ToString() + ","
+		outputStreamWriter.WriteLine(  Time.timeSinceLevelLoad.ToString() + ","
 			+ transform.position.x + ","
 			+ transform.position.y + ","
 			+ transform.position.z + ","

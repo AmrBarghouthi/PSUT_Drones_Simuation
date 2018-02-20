@@ -2,9 +2,9 @@
 <ArrayOfObjectState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <objectState xsi:type="uavObjectState">
     <position>
-      <x>5</x>
-      <y>0.6</y>
-      <z>0</z>
+      <x>-183.820679</x>
+      <y>5</y>
+      <z>220.025757</z>
     </position>
     <scale>
       <x>1</x>
@@ -20,9 +20,7 @@
     <prefabName>basicDrone</prefabName>
     <cmdList>
       <string>setSpeed 30</string>
-      <string>wait s102</string>
-      <string>move x10000 y100 z0</string>
-      <string>wait</string>
+      <string>move  x93.16522  y5 z-411.395</string>
     </cmdList>
     <uavData>
       <KeyValuePairOfStringString>
@@ -31,5 +29,555 @@
       </KeyValuePairOfStringString>
     </uavData>
   </objectState>
-
-</ArrayOfObjectState>
+  <objectState xsi:type="uavObjectState">
+    <position>
+      <x>-213.496155</x>
+      <y>5</y>
+      <z>-229.692749</z>
+    </position>
+    <scale>
+      <x>1</x>
+      <y>1</y>
+      <z>1</z>
+    </scale>
+    <rotation>
+      <x>0</x>
+      <y>0</y>
+      <z>0</z>
+    </rotation>
+    <name>drone 1</name>
+    <prefabName>basicDrone</prefabName>
+    <cmdList>
+      <string>setSpeed 30</string>
+      <string>move  x136.4088  y5 z-119.9771</string>
+    </cmdList>
+    <uavData>
+      <KeyValuePairOfStringString>
+        <Key>mass</Key>
+        <Value>4</Value>
+      </KeyValuePairOfStringString>
+    </uavData>
+  </objectState>
+  <objectState xsi:type="uavObjectState">
+    <position>
+      <x>450.049255</x>
+      <y>5</y>
+      <z>-454.3321</z>
+    </position>
+    <scale>
+      <x>1</x>
+      <y>1</y>
+      <z>1</z>
+    </scale>
+    <rotation>
+      <x>0</x>
+      <y>0</y>
+      <z>0</z>
+    </rotation>
+    <name>drone 2</name>
+    <prefabName>basicDrone</prefabName>
+    <cmdList>
+      <string>setSpeed 30</string>
+      <string>move  x287.7651  y5 z-317.2206</string>
+    </cmdList>
+    <uavData>
+      <KeyValuePairOfStringString>
+        <Key>mass</Key>
+        <Value>4</Value>
+      </KeyValuePairOfStringString>
+    </uavData>
+  </objectState>
+  <objectState xsi:type="uavObjectState">
+    <position>
+      <x>222.553467</x>
+      <y>5</y>
+      <z>132.1604</z>
+    </position>
+    <scale>
+      <x>1</x>
+      <y>1</y>
+      <z>1</z>
+    </scale>
+    <rotation>
+      <x>0</x>
+      <y>0</y>
+      <z>0</z>
+    </rotation>
+    <name>drone 3</name>
+    <prefabName>basicDrone</prefabName>
+    <cmdList>
+      <string>setSpeed 30</string>
+      <string>move  x-142.0748  y5 z498.7612</string>
+    </cmdList>
+    <uavData>
+      <KeyValuePairOfStringString>
+        <Key>mass</Key>
+        <Value>4</Value>
+      </KeyValuePairOfStringString>
+    </uavData>
+  </objectState>
+  <objectState xsi:type="uavObjectState">
+    <position>
+      <x>456.161743</x>
+      <y>5</y>
+      <z>-43.00647</z>
+    </position>
+    <scale>
+      <x>1</x>
+      <y>1</y>
+      <z>1</z>
+    </scale>
+    <rotation>
+      <x>0</x>
+      <y>0</y>
+      <z>0</z>
+    </rotation>
+    <name>drone 4</name>
+    <prefabName>basicDrone</prefabName>
+    <cmdList>
+      <string>setSpeed 30</string>
+      <string>move  x-151.0479  y5 z156.1919</string>
+    </cmdList>
+    <uavData>
+      <KeyValuePairOfStringString>
+        <Key>mass</Key>
+        <Value>4</Value>
+      </KeyValuePairOfStringString>
+    </uavData>
+  </objectState>
+  <objectState xsi:type="uavObjectState">
+    <position>
+      <x>157.736633</x>
+      <y>5</y>
+      <z>-442.421936</z>
+    </position>
+    <scale>
+      <x>1</x>
+      <y>1</y>
+      <z>1</z>
+    </scale>
+    <rotation>
+      <x>0</x>
+      <y>0</y>
+      <z>0</z>
+    </rotation>
+    <name>drone 5</name>
+    <prefabName>basicDrone</prefabName>
+    <cmdList>
+      <string>setSpeed 30</string>
+      <string>move  x-125.0978  y5 z369.1885</string>
+    </cmdList>
+    <uavData>
+      <KeyValuePairOfStringString>
+        <Key>mass</Key>
+        <Value>4</Value>
+      </KeyValuePairOfStringString>
+    </uavData>
+  </objectState>
+  <objectState xsi:type="uavObjectState">
+    <position>
+      <x>326.683777</x>
+      <y>5</y>
+      <z>-160.85881</z>
+    </position>
+    <scale>
+      <x>1</x>
+      <y>1</y>
+      <z>1</z>
+    </scale>
+    <rotation>
+      <x>0</x>
+      <y>0</y>
+      <z>0</z>
+    </rotation>
+    <name>drone 6</name>
+    <prefabName>basicDrone</prefabName>
+    <cmdList>
+      <string>setSpeed 30</string>
+      <string>move  x-346.1105  y5 z-412.7898</string>
+    </cmdList>
+    <uavData>
+      <KeyValuePairOfStringString>
+        <Key>mass</Key>
+        <Value>4</Value>
+      </KeyValuePairOfStringString>
+    </uavData>
+  </objectState>
+  <objectState xsi:type="uavObjectState">
+    <position>
+      <x>134.111267</x>
+      <y>5</y>
+      <z>45.42798</z>
+    </position>
+    <scale>
+      <x>1</x>
+      <y>1</y>
+      <z>1</z>
+    </scale>
+    <rotation>
+      <x>0</x>
+      <y>0</y>
+      <z>0</z>
+    </rotation>
+    <name>drone 7</name>
+    <prefabName>basicDrone</prefabName>
+    <cmdList>
+      <string>setSpeed 30</string>
+      <string>move  x91.96825  y5 z-242.6859</string>
+    </cmdList>
+    <uavData>
+      <KeyValuePairOfStringString>
+        <Key>mass</Key>
+        <Value>4</Value>
+      </KeyValuePairOfStringString>
+    </uavData>
+  </objectState>
+  <objectState xsi:type="uavObjectState">
+    <position>
+      <x>-122.641617</x>
+      <y>5</y>
+      <z>230.976685</z>
+    </position>
+    <scale>
+      <x>1</x>
+      <y>1</y>
+      <z>1</z>
+    </scale>
+    <rotation>
+      <x>0</x>
+      <y>0</y>
+      <z>0</z>
+    </rotation>
+    <name>drone 8</name>
+    <prefabName>basicDrone</prefabName>
+    <cmdList>
+      <string>setSpeed 30</string>
+      <string>move  x81.14497  y5 z-252.8927</string>
+    </cmdList>
+    <uavData>
+      <KeyValuePairOfStringString>
+        <Key>mass</Key>
+        <Value>4</Value>
+      </KeyValuePairOfStringString>
+    </uavData>
+  </objectState>
+  <objectState xsi:type="uavObjectState">
+    <position>
+      <x>-247.833679</x>
+      <y>5</y>
+      <z>194.6281</z>
+    </position>
+    <scale>
+      <x>1</x>
+      <y>1</y>
+      <z>1</z>
+    </scale>
+    <rotation>
+      <x>0</x>
+      <y>0</y>
+      <z>0</z>
+    </rotation>
+    <name>drone 9</name>
+    <prefabName>basicDrone</prefabName>
+    <cmdList>
+      <string>setSpeed 30</string>
+      <string>move  x296.5396  y5 z410.7101</string>
+    </cmdList>
+    <uavData>
+      <KeyValuePairOfStringString>
+        <Key>mass</Key>
+        <Value>4</Value>
+      </KeyValuePairOfStringString>
+    </uavData>
+  </objectState>
+  <objectState xsi:type="uavObjectState">
+    <position>
+      <x>-392.3631</x>
+      <y>5</y>
+      <z>-80.58565</z>
+    </position>
+    <scale>
+      <x>1</x>
+      <y>1</y>
+      <z>1</z>
+    </scale>
+    <rotation>
+      <x>0</x>
+      <y>0</y>
+      <z>0</z>
+    </rotation>
+    <name>drone 10</name>
+    <prefabName>basicDrone</prefabName>
+    <cmdList>
+      <string>setSpeed 30</string>
+      <string>move  x231.0071  y5 z-479.5923</string>
+    </cmdList>
+    <uavData>
+      <KeyValuePairOfStringString>
+        <Key>mass</Key>
+        <Value>4</Value>
+      </KeyValuePairOfStringString>
+    </uavData>
+  </objectState>
+  <objectState xsi:type="uavObjectState">
+    <position>
+      <x>156.809555</x>
+      <y>5</y>
+      <z>81.943924</z>
+    </position>
+    <scale>
+      <x>1</x>
+      <y>1</y>
+      <z>1</z>
+    </scale>
+    <rotation>
+      <x>0</x>
+      <y>0</y>
+      <z>0</z>
+    </rotation>
+    <name>drone 11</name>
+    <prefabName>basicDrone</prefabName>
+    <cmdList>
+      <string>setSpeed 30</string>
+      <string>move  x71.51324  y5 z359.2255</string>
+    </cmdList>
+    <uavData>
+      <KeyValuePairOfStringString>
+        <Key>mass</Key>
+        <Value>4</Value>
+      </KeyValuePairOfStringString>
+    </uavData>
+  </objectState>
+  <objectState xsi:type="uavObjectState">
+    <position>
+      <x>155.650009</x>
+      <y>5</y>
+      <z>-348.324524</z>
+    </position>
+    <scale>
+      <x>1</x>
+      <y>1</y>
+      <z>1</z>
+    </scale>
+    <rotation>
+      <x>0</x>
+      <y>0</y>
+      <z>0</z>
+    </rotation>
+    <name>drone 12</name>
+    <prefabName>basicDrone</prefabName>
+    <cmdList>
+      <string>setSpeed 30</string>
+      <string>move  x1.765442  y5 z340.5288</string>
+    </cmdList>
+    <uavData>
+      <KeyValuePairOfStringString>
+        <Key>mass</Key>
+        <Value>4</Value>
+      </KeyValuePairOfStringString>
+    </uavData>
+  </objectState>
+  <objectState xsi:type="uavObjectState">
+    <position>
+      <x>-238.243042</x>
+      <y>5</y>
+      <z>-376.03125</z>
+    </position>
+    <scale>
+      <x>1</x>
+      <y>1</y>
+      <z>1</z>
+    </scale>
+    <rotation>
+      <x>0</x>
+      <y>0</y>
+      <z>0</z>
+    </rotation>
+    <name>drone 13</name>
+    <prefabName>basicDrone</prefabName>
+    <cmdList>
+      <string>setSpeed 30</string>
+      <string>move  x-377.9575  y5 z78.79774</string>
+    </cmdList>
+    <uavData>
+      <KeyValuePairOfStringString>
+        <Key>mass</Key>
+        <Value>4</Value>
+      </KeyValuePairOfStringString>
+    </uavData>
+  </objectState>
+  <objectState xsi:type="uavObjectState">
+    <position>
+      <x>154.166443</x>
+      <y>5</y>
+      <z>428.440674</z>
+    </position>
+    <scale>
+      <x>1</x>
+      <y>1</y>
+      <z>1</z>
+    </scale>
+    <rotation>
+      <x>0</x>
+      <y>0</y>
+      <z>0</z>
+    </rotation>
+    <name>drone 14</name>
+    <prefabName>basicDrone</prefabName>
+    <cmdList>
+      <string>setSpeed 30</string>
+      <string>move  x-192.1371  y5 z-396.632</string>
+    </cmdList>
+    <uavData>
+      <KeyValuePairOfStringString>
+        <Key>mass</Key>
+        <Value>4</Value>
+      </KeyValuePairOfStringString>
+    </uavData>
+  </objectState>
+  <objectState xsi:type="uavObjectState">
+    <position>
+      <x>194.949738</x>
+      <y>5</y>
+      <z>222.322922</z>
+    </position>
+    <scale>
+      <x>1</x>
+      <y>1</y>
+      <z>1</z>
+    </scale>
+    <rotation>
+      <x>0</x>
+      <y>0</y>
+      <z>0</z>
+    </rotation>
+    <name>drone 15</name>
+    <prefabName>basicDrone</prefabName>
+    <cmdList>
+      <string>setSpeed 30</string>
+      <string>move  x-4.637177  y5 z224.8509</string>
+    </cmdList>
+    <uavData>
+      <KeyValuePairOfStringString>
+        <Key>mass</Key>
+        <Value>4</Value>
+      </KeyValuePairOfStringString>
+    </uavData>
+  </objectState>
+  <objectState xsi:type="uavObjectState">
+    <position>
+      <x>-202.184021</x>
+      <y>5</y>
+      <z>130.327927</z>
+    </position>
+    <scale>
+      <x>1</x>
+      <y>1</y>
+      <z>1</z>
+    </scale>
+    <rotation>
+      <x>0</x>
+      <y>0</y>
+      <z>0</z>
+    </rotation>
+    <name>drone 16</name>
+    <prefabName>basicDrone</prefabName>
+    <cmdList>
+      <string>setSpeed 30</string>
+      <string>move  x-170.6418  y5 z117.6008</string>
+    </cmdList>
+    <uavData>
+      <KeyValuePairOfStringString>
+        <Key>mass</Key>
+        <Value>4</Value>
+      </KeyValuePairOfStringString>
+    </uavData>
+  </objectState>
+  <objectState xsi:type="uavObjectState">
+    <position>
+      <x>291.41626</x>
+      <y>5</y>
+      <z>-481.847168</z>
+    </position>
+    <scale>
+      <x>1</x>
+      <y>1</y>
+      <z>1</z>
+    </scale>
+    <rotation>
+      <x>0</x>
+      <y>0</y>
+      <z>0</z>
+    </rotation>
+    <name>drone 17</name>
+    <prefabName>basicDrone</prefabName>
+    <cmdList>
+      <string>setSpeed 30</string>
+      <string>move  x175.4782  y5 z183.9059</string>
+    </cmdList>
+    <uavData>
+      <KeyValuePairOfStringString>
+        <Key>mass</Key>
+        <Value>4</Value>
+      </KeyValuePairOfStringString>
+    </uavData>
+  </objectState>
+  <objectState xsi:type="uavObjectState">
+    <position>
+      <x>301.782837</x>
+      <y>5</y>
+      <z>453.147156</z>
+    </position>
+    <scale>
+      <x>1</x>
+      <y>1</y>
+      <z>1</z>
+    </scale>
+    <rotation>
+      <x>0</x>
+      <y>0</y>
+      <z>0</z>
+    </rotation>
+    <name>drone 18</name>
+    <prefabName>basicDrone</prefabName>
+    <cmdList>
+      <string>setSpeed 30</string>
+      <string>move  x457.7398  y5 z-457.3554</string>
+    </cmdList>
+    <uavData>
+      <KeyValuePairOfStringString>
+        <Key>mass</Key>
+        <Value>4</Value>
+      </KeyValuePairOfStringString>
+    </uavData>
+  </objectState>
+  <objectState xsi:type="uavObjectState">
+    <position>
+      <x>-154.1676</x>
+      <y>5</y>
+      <z>71.9186554</z>
+    </position>
+    <scale>
+      <x>1</x>
+      <y>1</y>
+      <z>1</z>
+    </scale>
+    <rotation>
+      <x>0</x>
+      <y>0</y>
+      <z>0</z>
+    </rotation>
+    <name>drone 19</name>
+    <prefabName>basicDrone</prefabName>
+    <cmdList>
+      <string>setSpeed 30</string>
+      <string>move  x-356.3679  y5 z-436.0414</string>
+    </cmdList>
+    <uavData>
+      <KeyValuePairOfStringString>
+        <Key>mass</Key>
+        <Value>4</Value>
+      </KeyValuePairOfStringString>
+    </uavData>
+  </objectState>
+</ArrayOfObjectState>ate>
