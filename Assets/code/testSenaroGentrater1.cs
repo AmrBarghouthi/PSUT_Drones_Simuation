@@ -13,14 +13,21 @@ public class testSenaroGentrater1 : MonoBehaviour {
 	int maxNumberOfTrys = 1000;
 	public int numberOfMoveCmds;
 	List<Vector3> currentStartLocations;
+    int numberOfDronesIndex;
+    int[] droneNumbers = { 500,750,1000,1500 };
     void makeCase()
     {
         minX = -AreaWidth / 2;
         maxX = -minX;
         maxZ = maxX;
         minZ = minX;
-        if(PlayerPrefs.HasKey("numOfdrone"))
-         numberOfDrones = PlayerPrefs.GetInt("numOfdrone");
+        if (PlayerPrefs.HasKey("numberOfDronesIndex"))
+            numberOfDronesIndex = PlayerPrefs.GetInt("numberOfDronesIndex");
+        else
+            numberOfDronesIndex = 0;
+        numberOfDrones = droneNumbers[numberOfDronesIndex];
+      
+         
         currentStartLocations = new List<Vector3>();
         for (int i = 0; i < numberOfDrones; i++)
         {
@@ -58,13 +65,14 @@ public class testSenaroGentrater1 : MonoBehaviour {
         //Debug.Log("points Gnareted");
         List<objectState> stateList = new List<objectState>();
         int count = 0;
+        
         foreach (var x in currentStartLocations)
         {
 
             Dictionary<string, string> uavData = new Dictionary<string, string>();
             uavData["mass"] = "4";
             string[] cmdList = new string[numberOfMoveCmds + 1];
-            cmdList[0] = "setSpeed 30";
+            cmdList[0] = "setSpeed 15";
             for (int k = 0; k < numberOfMoveCmds; k++)
             {
                 Vector3 endLocation = getRandomVector();
@@ -97,24 +105,38 @@ public class testSenaroGentrater1 : MonoBehaviour {
     double lastSenceStartTime = 0;
 	void Start () {
 
-        
-        makeCase();
-        PlayerPrefs.SetInt("numOfdrone", numberOfDrones+5);
-        if (numberOfDrones >= 120 )
+        Application.runInBackground = true;
+        PlayerPrefs.SetFloat("simTime", 60 * 2);
+        if (PlayerPrefs.HasKey("numberOfDronesIndex"))
+            numberOfDronesIndex = PlayerPrefs.GetInt("numberOfDronesIndex");
+        else
+            numberOfDronesIndex = 0;
+        if (numberOfDronesIndex == droneNumbers.Length)
         {
             PlayerPrefs.DeleteAll();
             Application.Quit();
         }
-         else if(!Application.isLoadingLevel)
+        else if (!Application.isLoadingLevel)
+        {
+
+            PlayerPrefs.SetInt("numberOfDronesIndex", numberOfDronesIndex);
+            makeCase();
             Application.LoadLevel("emptyPlane");
-        
-	}
+        }
+        numberOfDronesIndex++;
+        PlayerPrefs.SetInt("numberOfDronesIndex", numberOfDronesIndex);
+
+    }
 
 
-	Vector3 getRandomVector()
+    Vector3 getRandomVector()
 	{
 		return new Vector3 (UnityEngine.Random.Range(minX,maxX),Y,UnityEngine.Random.Range(minZ,maxZ));
 	}
+    private void OnApplicationQuit()
+    {
+        PlayerPrefs.DeleteAll();
+    }
     public void FixedUpdate()
     {
      //   Debug.Log("time = " +   Time.timeSinceLevelLoad.ToString());
