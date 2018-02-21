@@ -112,6 +112,11 @@ public class droneWithPid : UAV {
             target = transform.position;
             curCmd = "wait";
         }
+        if (curCmd.Contains("powerON"))
+            powerON = true;
+        if (curCmd.Contains("powerOFF"))
+            powerON = false;
+        
         //change position orders drone to move certain displacement while move command
         //orders drone to go to a new position at x,y,z
 
@@ -182,7 +187,8 @@ public class droneWithPid : UAV {
                     driveY = posY.Update(target.y, transform.position.y, Time.deltaTime);
                     driveZ = posZ.Update(target.z, transform.position.z, Time.deltaTime);
                 }
-                rb.AddForce(new Vector3(driveX, driveY, driveZ));
+                if(powerON == true)
+                  rb.AddForce(new Vector3(driveX, driveY, driveZ));
                 //Debug.Log(rb.velocity);
                // this.transform.Translate(dir * Time.deltaTime * speed, Space.World);
                 if ((target - transform.position).magnitude < 0.2 && curCmd.Contains("move"))
@@ -219,13 +225,16 @@ public class droneWithPid : UAV {
             }
            
         }
-       // Debug.Log(waitTime);
-        if(updateMsgTimer>=updateMsgPeriod)
+        // Debug.Log(waitTime);
+        if (powerON)
         {
-            sendPeriodicMsgs();
-            updateMsgTimer = 0;
+            if (updateMsgTimer >= updateMsgPeriod)
+            {
+                sendPeriodicMsgs();
+                updateMsgTimer = 0;
+            }
+            updateMsgTimer += Time.deltaTime;
         }
-        updateMsgTimer += Time.deltaTime;
         outputStreamWriter.WriteLine(  Time.timeSinceLevelLoad.ToString() + ","
             + transform.position.x + ","
             + transform.position.y + ","
@@ -269,7 +278,8 @@ public class droneWithPid : UAV {
         //cmdList[1] = "wait";
         //currentCmdIndex = 0;
         //cmdDone = true;
-        Destroy(this.gameObject);
+        if(powerON)
+         Destroy(this.gameObject);
        // Debug.Log(name + " cs LogSize:" + eventLogger.logs.Count);
 
     }

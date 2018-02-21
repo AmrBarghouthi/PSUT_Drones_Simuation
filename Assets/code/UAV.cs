@@ -13,7 +13,7 @@ public class UAV : MonoBehaviour
     public string[] cmdList { set; get; }
     public uint currentCmdIndex = 0;
     // public string droneId {set; get;} using the bultin unity monoBehavior name attr
-
+    protected bool powerON = true;
     protected droneEventsLogger eventLogger;
     protected Stream outputStream;
 	protected StreamWriter outputStreamWriter;
@@ -102,6 +102,7 @@ public class UAV : MonoBehaviour
     }
     public virtual void readMessage(object msg,UAV src)
     {
+        if (powerON == false) return;
         droneEventLogEntry entry = new droneEventLogEntry();
         entry.cmd = lastFetchedCmd;
         entry.entryType = "new message recived ";
