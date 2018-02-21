@@ -41,10 +41,11 @@ public class loadEnv : MonoBehaviour {
     private void FixedUpdate()
     {
         //Debug.Log("time " +   Time.timeSinceLevelLoad);
-        if((  Time.timeSinceLevelLoad-startTime) >= 60*4)
-        {
-            Application.LoadLevel("test");
-        }
+        if(PlayerPrefs.HasKey("simTime"))
+            if((  Time.timeSinceLevelLoad-startTime) >= PlayerPrefs.GetFloat("simTime"))
+            {
+                Application.LoadLevel("test");
+            }
         var droneList = FindObjectsOfType<UAV>();
         int numberOfDrones = droneList.Length;
         summaryStremWrite.WriteLine(  Time.timeSinceLevelLoad.ToString()+","+ numberOfDrones);
