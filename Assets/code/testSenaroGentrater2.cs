@@ -30,11 +30,15 @@ public class testSenaroGentrater2: MonoBehaviour
 
             Dictionary<string, string> uavData = new Dictionary<string, string>();
             uavData["mass"] = "4";
-            string[] cmdList = new string[4];
-            cmdList[0] = "setSpeed 30";
-            cmdList[1] = "wait " + Random.Range(0, 2 * 60);
-            cmdList[2] = "move x" + endLoc.x + " y" + endLoc.y + " z" + endLoc.z;
-            cmdList[3] = "wait";
+            string[] cmdList = new string[7];
+            cmdList[0] = "powerOFF";
+            cmdList[1] = "setSpeed 15";
+            cmdList[2] = "wait s" + Random.Range(0, 2 * 60);
+            cmdList[3] = "powerON";
+            cmdList[4] = "move x" + endLoc.x + " y" + endLoc.y + " z" + endLoc.z;
+            cmdList[5] = "move x" + endLoc.x + " y" + "0.8" + " z" + endLoc.z;
+
+            cmdList[6] = "powerOFF";
 
             uavObjectState state = new uavObjectState("drone " + count.ToString(), "basicDrone");
             state.position = startLoc;
