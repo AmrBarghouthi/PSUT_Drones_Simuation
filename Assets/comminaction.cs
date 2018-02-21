@@ -49,10 +49,14 @@ public class comminaction : MonoBehaviour {
     void OnDestroy()
     {
         Stream outStream = new FileStream(loadEnv.folderName + "/comm.xml", FileMode.Create);
-
+        Stream outStreamJson = new FileStream(loadEnv.folderName + "/comm.json",FileMode.Create);
+        StreamWriter jsonWriter = new StreamWriter(outStreamJson);
+        jsonWriter.Write(JsonUtility.ToJson(loger,true));
         XmlSerializer temp = new XmlSerializer(typeof(comminactionLogger));
         temp.Serialize(outStream, loger);
-
+        jsonWriter.Flush();
+        jsonWriter.Close();
+        jsonWriter.Dispose();
         outStream.Flush();
         outStream.Close();
         outStream.Dispose();
