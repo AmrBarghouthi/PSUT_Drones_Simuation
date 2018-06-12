@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
+using System.Xml.Linq;
 
 public class realDroneCont : UAV {
 
@@ -98,5 +100,16 @@ public class realDroneCont : UAV {
         if (inputAngle > 180)
             inputAngle = (inputAngle - 360f);
         return inputAngle;
+    }
+
+    public void RecieveMessages(Dictionary<string,string> Messages) {
+        Debug.Log("Recieving has started...");
+
+        XElement root = new XElement("Root",  
+        from keyValue in Messages
+        select new XElement(keyValue.Key, keyValue.Value)  
+        );  
+        root.Save("../../Messages.xml");
+        Debug.Log("File messages has been saved!");
     }
 }

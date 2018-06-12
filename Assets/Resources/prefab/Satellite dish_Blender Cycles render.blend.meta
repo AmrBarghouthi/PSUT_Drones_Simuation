@@ -1,0 +1,205 @@
+fileFormatVersion: 2
+guid: 2d75564c423dd49aeb0439e7849f811e
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Armature_000
+    100002: Armature_001
+    100004: Armature_002
+    100006: Armature_003
+    100008: Armature_004
+    100010: Bone
+    100012: Bone_0
+    100014: Bone_001
+    100016: Bone_002
+    100018: Bone_003
+    100020: Bone_004
+    100022: Bone_005
+    100024: Bone_006
+    100026: Bone_1
+    100028: Bone_10
+    100030: Bone_11
+    100032: Bone_12
+    100034: Bone_13
+    100036: Bone_14
+    100038: Bone_15
+    100040: Bone_16
+    100042: Bone_17
+    100044: Bone_18
+    100046: Bone_19
+    100048: Bone_2
+    100050: Bone_20
+    100052: Bone_21
+    100054: Bone_22
+    100056: Bone_23
+    100058: Bone_24
+    100060: Bone_25
+    100062: Bone_26
+    100064: Bone_27
+    100066: Bone_3
+    100068: Bone_4
+    100070: Bone_5
+    100072: Bone_6
+    100074: Bone_7
+    100076: Bone_8
+    100078: Bone_9
+    100080: Circle_000
+    100082: Circle_001
+    100084: Circle_002
+    100086: Circle_003
+    100088: Circle_004
+    100090: Cube_001
+    100092: Plane
+    100094: //RootNode
+    400000: Armature_000
+    400002: Armature_001
+    400004: Armature_002
+    400006: Armature_003
+    400008: Armature_004
+    400010: Bone
+    400012: Bone_0
+    400014: Bone_001
+    400016: Bone_002
+    400018: Bone_003
+    400020: Bone_004
+    400022: Bone_005
+    400024: Bone_006
+    400026: Bone_1
+    400028: Bone_10
+    400030: Bone_11
+    400032: Bone_12
+    400034: Bone_13
+    400036: Bone_14
+    400038: Bone_15
+    400040: Bone_16
+    400042: Bone_17
+    400044: Bone_18
+    400046: Bone_19
+    400048: Bone_2
+    400050: Bone_20
+    400052: Bone_21
+    400054: Bone_22
+    400056: Bone_23
+    400058: Bone_24
+    400060: Bone_25
+    400062: Bone_26
+    400064: Bone_27
+    400066: Bone_3
+    400068: Bone_4
+    400070: Bone_5
+    400072: Bone_6
+    400074: Bone_7
+    400076: Bone_8
+    400078: Bone_9
+    400080: Circle_000
+    400082: Circle_001
+    400084: Circle_002
+    400086: Circle_003
+    400088: Circle_004
+    400090: Cube_001
+    400092: Plane
+    400094: //RootNode
+    2100000: Material_013__Satellite_dish_Col_png
+    2100002: Material_004__Satellite_dish_Col_png
+    2100004: unnamed
+    2100006: Material_002
+    2300000: Cube_001
+    2300002: Plane
+    3300000: Cube_001
+    3300002: Plane
+    4300000: Circle_004
+    4300002: Circle_002
+    4300004: Circle_001
+    4300006: Circle_000
+    4300008: Cube_001
+    4300010: Plane
+    4300012: Circle_003
+    7400000: Default Take
+    9500000: //RootNode
+    13700000: Circle_000
+    13700002: Circle_001
+    13700004: Circle_002
+    13700006: Circle_003
+    13700008: Circle_004
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
