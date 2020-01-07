@@ -53,7 +53,7 @@ public class droneWithPid : UAV {
     void decode()
     {
         curCmd = fetchCmad();
-        Debug.Log("decodeing :" + curCmd);
+       // Debug.Log("decodeing :" + curCmd);
 
         if (curCmd.Contains("goToObject"))
         {
@@ -112,6 +112,11 @@ public class droneWithPid : UAV {
             target = transform.position;
             curCmd = "wait";
         }
+        if (curCmd.Contains("powerON"))
+            powerON = true;
+        if (curCmd.Contains("powerOFF"))
+            powerON = false;
+        
         //change position orders drone to move certain displacement while move command
         //orders drone to go to a new position at x,y,z
 
@@ -150,7 +155,7 @@ public class droneWithPid : UAV {
             decode();
         //no need for eles strat exexuting the new cmd on the smae time unit it's decoded
         {
-            Debug.Log(name+" exeuting " + curCmd);
+           // Debug.Log(name+" exeuting " + curCmd);
 
 
             /////change position
@@ -182,7 +187,8 @@ public class droneWithPid : UAV {
                     driveY = posY.Update(target.y, transform.position.y, Time.deltaTime);
                     driveZ = posZ.Update(target.z, transform.position.z, Time.deltaTime);
                 }
-                rb.AddForce(new Vector3(driveX, driveY, driveZ));
+                if(powerON == true)
+                  rb.AddForce(new Vector3(driveX, driveY, driveZ));
                 //Debug.Log(rb.velocity);
                // this.transform.Translate(dir * Time.deltaTime * speed, Space.World);
                 if ((target - transform.position).magnitude < 0.2 && curCmd.Contains("move"))
@@ -211,7 +217,7 @@ public class droneWithPid : UAV {
                 cmdDone = true;
             if (curCmd == "wait")
             {
-                Debug.Log("remanig time to wait" + waitTime);
+               // Debug.Log("remanig time to wait " + waitTime);
                 if (waitTime > 0)
                     waitTime -= Time.deltaTime;
                 else
@@ -219,14 +225,17 @@ public class droneWithPid : UAV {
             }
            
         }
-       // Debug.Log(waitTime);
-        if(updateMsgTimer>=updateMsgPeriod)
+        // Debug.Log(waitTime);
+        if (powerON)
         {
-            sendPeriodicMsgs();
-            updateMsgTimer = 0;
+            if (updateMsgTimer >= updateMsgPeriod)
+            {
+                sendPeriodicMsgs();
+                updateMsgTimer = 0;
+            }
+            updateMsgTimer += Time.deltaTime;
         }
-        updateMsgTimer += Time.deltaTime;
-        outputStreamWriter.WriteLine(Time.time.ToString() + ","
+        outputStreamWriter.WriteLine(  Time.timeSinceLevelLoad.ToString() + ","
             + transform.position.x + ","
             + transform.position.y + ","
             + transform.position.z + ","
@@ -246,7 +255,7 @@ public class droneWithPid : UAV {
 
         //Debug.Log("collision");
         //eventsOutputStreamWriter.WriteLine("collisionData");
-        //eventsOutputStreamWriter.WriteLine("time = " +Time.time);
+        //eventsOutputStreamWriter.WriteLine("time = " +  Time.timeSinceLevelLoad);
         //eventsOutputStreamWriter.WriteLine("object = "+collision.transform.name);
         //eventsOutputStreamWriter.WriteLine("EndcollisionData\n");
         droneEventLogEntry entry = new droneEventLogEntry();
@@ -255,7 +264,8 @@ public class droneWithPid : UAV {
         entry.position = this.transform.position;
         entry.rotation = this.transform.rotation.eulerAngles;
         entry.velocity = rb.velocity;
-        entry.time = Time.time;
+        entry.time =   Time.timeSinceLevelLoad;
+      
         entry.relativeVelocity = collision.relativeVelocity;
         entry.otherName = collision.gameObject.name;
         UAV otherUAV = collision.gameObject.GetComponent<UAV>();
@@ -268,7 +278,8 @@ public class droneWithPid : UAV {
         //cmdList[1] = "wait";
         //currentCmdIndex = 0;
         //cmdDone = true;
-        Destroy(this.gameObject);
+        if(powerON)
+         Destroy(this.gameObject);
        // Debug.Log(name + " cs LogSize:" + eventLogger.logs.Count);
 
     }
@@ -313,7 +324,7 @@ public class droneWithPid : UAV {
     {
         //Debug.Log(other.name+" is in range");
         //eventsOutputStreamWriter.WriteLine("newObjectInRange");
-        //eventsOutputStreamWriter.WriteLine("time = " + Time.time);
+        //eventsOutputStreamWriter.WriteLine("time = " +   Time.timeSinceLevelLoad);
         //eventsOutputStreamWriter.WriteLine("object = " + other.name);
         //eventsOutputStreamWriter.WriteLine("endnewObjectInRange\n");
         if (inRageObjects.Contains(other.gameObject))
@@ -325,7 +336,7 @@ public class droneWithPid : UAV {
         entry.position = this.transform.position;
         entry.rotation = this.transform.rotation.eulerAngles;
         entry.velocity = rb.velocity;
-        entry.time = Time.time;
+        entry.time =   Time.timeSinceLevelLoad;
         //  entry.relativeVelocity = collision.relativeVelocity;
 
         entry.otherName = other.name;
@@ -357,7 +368,7 @@ public class droneWithPid : UAV {
         entry.position = this.transform.position;
         entry.rotation = this.transform.rotation.eulerAngles;
         entry.velocity = rb.velocity;
-        entry.time = Time.time;
+        entry.time =   Time.timeSinceLevelLoad;
         //  entry.relativeVelocity = collision.relativeVelocity;
 
         entry.otherName = other.name;

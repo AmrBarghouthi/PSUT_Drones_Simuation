@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
- 
-    public class comminactionLogEntry
+[Serializable]
+public class comminactionLogEntry
     {
         public string msg, from, to;
         public List<reviverData> recivedby;
@@ -16,7 +16,8 @@ using System.Text;
                 faildToReciveBy = new List<reviverData>();
         }
     }
-    public class reviverData
+[Serializable]
+public class reviverData
     {
        public string name;
        public float distance;
